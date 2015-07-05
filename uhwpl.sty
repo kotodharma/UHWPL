@@ -1,3 +1,8 @@
+% LateX `uhwpl' bibliography style (29-Apr-15)
+% Developed by David J. Iannucci by modifying Dan Jurafsky's lsalike to match
+% as closely as possible the UH Manoa Linguistics Dept's "Guidelines for
+% working papers" (version of February 2015)
+
 % Latex `lsalike' bibliography style (06-Jan-94 version 1.0alpha),
 % This file implements citations for the ``lsalike'' bibliography style.
 % It derives originally from `named', modified by a lot of people
@@ -132,11 +137,12 @@
 % The style will currently dashify the second Christopher Robin -
 % this is not standard.
 
-\def\lsadashify#1{---\hspace*{-2pt}---}
+%\def\lsadashify#1{---\hspace*{-2pt}---}
+\def\lsadashify{\relax}
 
-\def\lsadashifynew#1{---\hspace*{-2pt}---}
-%\def\lsadashifynew#1{#1}
+%\def\lsadashifynew#1{---\hspace*{-2pt}---}
+\def\lsadashifynew#1{#1}
 
-\def\lsaand{\& }
-%\def\lsaand{and }
+%\def\lsaand{\& }
+\def\lsaand{and }
 

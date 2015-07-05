@@ -1,3 +1,8 @@
+% BibTeX `uhwpl' bibliography style (29-Apr-15)
+% Developed by David J. Iannucci by modifying Dan Jurafsky's lsalike to match
+% as closely as possible the UH Manoa Linguistics Dept's "Guidelines for
+% working papers" (version of February 2015)
+
 % BibTeX `lsalike' bibliography style (06-Jan-94)
 % 
 % Designed by Dan Jurafsky, modified from a version of `apalike.bst' augmented 
@@ -275,7 +280,7 @@ FUNCTION {format.rev.names}  % reverse first name in name list
   
   % format first name in reverse order	
   s nameptr "{vv~}{ll}{, jj}{, ff}" format.name$ 't :=   % last name first 
-  "{\sc " t * "}" * 't := 	% put in small caps for LSA	
+  "{\scshape " t * "}" * 't := 	% put in small caps
   nameptr #1 + 'nameptr :=
   namesleft #1 - 'namesleft :=
 
@@ -293,7 +298,7 @@ FUNCTION {format.rev.names}  % reverse first name in name list
   
   { namesleft #0 > }
     { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=    % first name first
-       "{\sc " t * "}" * 't := 	% put in small caps for LSA	
+       "{\scshape " t * "}" * 't := 	% put in small caps
        dup #0 =
          'skip$
          { lsanewflag 
