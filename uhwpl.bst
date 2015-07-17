@@ -1,5 +1,5 @@
 % BibTeX `uhwpl' bibliography style (29-Apr-15)
-% Developed by David J. Iannucci by modifying Dan Jurafsky's lsalike to match
+% Adapted by David J. Iannucci from Dan Jurafsky's lsalike to match
 % as closely as possible the UH Manoa Linguistics Dept's "Guidelines for
 % working papers" (version of February 2015)
 
