@@ -137,7 +137,7 @@ FUNCTION {output.nonnull}
     { output.state after.block =
 	{ my.add.period write$
 	  newline$
-	  "\newblock " write$
+	  "\unskip\hspace{\wordsep}\ignorespaces " write$
 	}
 	{ output.state before.all =
 	    'write$
