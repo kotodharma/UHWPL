@@ -1,7 +1,7 @@
-% BibTeX `uhwpl' bibliography style (29-Apr-15)
+% BibTeX `uhwpl' bibliography style (17-Jul-15)
 % Adapted by David J. Iannucci from Dan Jurafsky's lsalike to match
-% as closely as possible the UH Manoa Linguistics Dept's "Guidelines for
-% working papers" (version of February 2015)
+% as closely as possible the University of Hawai'i at Manoa Linguistics Dept's
+% "Guidelines for working papers" (version of February 2015)
 
 % BibTeX `lsalike' bibliography style (06-Jan-94)
 % 
