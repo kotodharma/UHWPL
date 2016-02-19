@@ -308,10 +308,10 @@ FUNCTION {format.rev.names}  % reverse first name in name list
            dup #1 - 'dup :=}
        if$
        namesleft #1 >
-          { ", " * t * }
+          { "; " * t * }
 %          { numnames #2 >
           { numnames #1 >
-	         { "," * }
+	         { ";" * }
 	         'skip$
 	     if$
 	     t "others" =
@@ -458,12 +458,12 @@ FUNCTION {either.or.check}
 FUNCTION {format.bvolume}
 { volume empty$
     { "" }
-    { "volume" volume tie.or.space.connect
+    { "Vol." volume tie.or.space.connect
       series empty$
 	'skip$
 	{ " of " * series emphasize * }
       if$
-      "volume and number" number either.or.check
+      "Volume and number" number either.or.check
     }
   if$
 }
@@ -535,20 +535,20 @@ FUNCTION {format.pages}
 
 FUNCTION {format.vol.num.pages}
 { volume field.or.null
-%  number empty$
-%    'skip$
-%    { "(" number * ")" * *
-%      volume empty$
-%	{ "there's a number but no volume in " cite$ * warning$ }
-%	'skip$
-%      if$
-%    }
-%  if$
+  number empty$
+    'skip$
+    { "(" number * ")" * *
+      volume empty$
+	{ "there's a number but no volume in " cite$ * warning$ }
+	'skip$
+      if$
+    }
+  if$
   pages empty$
     'skip$
     { duplicate$ empty$
 	{ pop$ format.pages }
-	{ "." * pages n.dashify * }
+	{ ":" * pages n.dashify * }
       if$
     }
   if$
@@ -796,8 +796,9 @@ FUNCTION {inproceedings}
       format.bvolume output
       format.number.series output
       format.pages output
-      address output					% for apalike
-      new.sentence					% there's no year
+      % commented out for UHWPL % address output				% for apalike
+      format.address
+      % commented out for UHWPL % new.sentence					% there's no year
       organization output				% here so things
       publisher output					% are simpler
     }
