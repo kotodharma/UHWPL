@@ -471,17 +471,13 @@ FUNCTION {format.bvolume}
 FUNCTION {format.number.series}
 { volume empty$
     { number empty$
-	{ series field.or.null }
-	{ output.state mid.sentence =
-	    { "number" }
-	    { "Number" }
-	  if$
-	  number tie.or.space.connect
-	  series empty$
-	    { "there's a number but no series in " cite$ * warning$ }
-	    { " in " * series * }
-	  if$
-	}
+	  { series field.or.null }
+	  { series empty$
+	      { "there's a number but no series in " cite$ * warning$ }
+	      { series "~" * number * }
+	    if$
+	    % number tie.or.space.connect
+	  }
       if$
     }
     { "" }
