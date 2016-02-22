@@ -49,9 +49,12 @@
 
 \@ifundefined{chapter}{\def\thebibliography#1{\section*{References\@mkboth
   {REFERENCES}{REFERENCES}}\list
-  {\relax}{\setlength{\labelsep}{0em}
+  {\relax}{
+    \setlength{\labelsep}{0em}
 	\setlength{\itemindent}{-\bibhang}
-	\setlength{\leftmargin}{\bibhang}}
+	\setlength{\leftmargin}{\bibhang}
+    \setlength{\itemsep}{2pt}
+    }
     \def\newblock{\hskip .11em plus .33em minus .07em}
     \sloppy\clubpenalty4000\widowpenalty4000
     \sfcode`\.=1000\relax}}%
