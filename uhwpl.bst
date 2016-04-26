@@ -309,16 +309,19 @@ FUNCTION {format.rev.names}  % reverse first name in name list
        if$
        namesleft #1 >
           { "; " * t * }
-%          { numnames #2 >
-          { numnames #1 >
+          { numnames #2 >
 	         { ";" * }
-	         'skip$
-	     if$
-	     t "others" =
-	        { " {\em et~al.\/}" * }
-	        { "  \lsaand " * t * }
-	     if$
-	   }
+	         { numnames #1 > 
+                 { "," * }
+	             'skip$
+               if$
+             }
+	        if$
+	        t "others" =
+	           { " {\em et~al.\/}" * }
+	           { "  \lsaand " * t * }
+	        if$
+	      }
        if$
       nameptr #1 + 'nameptr :=
       namesleft #1 - 'namesleft :=
